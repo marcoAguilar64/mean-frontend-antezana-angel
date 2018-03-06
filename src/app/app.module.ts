@@ -8,6 +8,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { HeaderComponent } from './header/header.component';
 import { UserFormEditComponent } from './user-form-edit/user-form-edit.component';
 import { UserFormCreateComponent } from './user-form-create/user-form-create.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { UserFormCreateComponent } from './user-form-create/user-form-create.com
     UserListComponent,
     HeaderComponent,
     UserFormEditComponent,
-    UserFormCreateComponent
+    UserFormCreateComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
