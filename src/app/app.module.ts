@@ -11,6 +11,7 @@ import { UserFormCreateComponent } from './user-form-create/user-form-create.com
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserService } from './services/user.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
