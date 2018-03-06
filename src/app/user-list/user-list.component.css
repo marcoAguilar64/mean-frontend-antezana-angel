@@ -1,0 +1,9 @@
+.clean {
+  clear: both
+}
+
+.detail-user {
+  float: left;
+  width: 15%;
+  outline: black solid thin
+}

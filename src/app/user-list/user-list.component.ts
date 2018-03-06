@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/user';
 
 @Component({
   selector: 'sky-user-list',
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
+  usertest: User = {
+    name: "Luis",
+    lastname: "Perez",
+    username: "lucho123",
+    email: "lucho@gmail.com",
+    avatar: "testavatartt"
+  };
   constructor() { }
 
   ngOnInit() {
