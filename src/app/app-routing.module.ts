@@ -15,13 +15,13 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   }, {
-    path: 'userlist',
+    path: 'user/list',
     component: UserListComponent
   }, {
-    path: 'usercreate',
+    path: 'user/create',
     component: UserFormCreateComponent
   }, {
-    path: 'useredit',
+    path: 'user/edit',
     component: UserFormEditComponent
   }
 ];
