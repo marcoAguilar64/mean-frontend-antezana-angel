@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
 import { UserService } from '../services/user.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'sky-user-list',
@@ -9,23 +10,24 @@ import { UserService } from '../services/user.service';
 })
 export class UserListComponent implements OnInit {
 
-  userlist: User[] = [];
   myUserService: UserService;
-
-  /* usertest: User = {
-    name: "Luis",
-    lastname: "Perez",
-    username: "lucho123",
-    email: "lucho@gmail.com",
-    avatar: "testavatartt"
-  }; */
+  userlist: User[] = [];
 
   constructor(userService: UserService) {
     this.myUserService = userService;
   }
 
   ngOnInit() {
-    this.userlist = this.myUserService.getUserList();
+    this.myUserService.getUserList()
+      .subscribe(
+        (response) => {
+          //console.log('Respuesta del servidor: ', response);
+          this.userlist = response.data;
+        },
+        (error) => {
+          console.log('Error del servidor: ', error);
+        }
+      );
   }
 
 }
