@@ -1,0 +1,51 @@
+1.- Generar el proyecto	
+	ng new mean-frontend-antezana-angel --prefix umss --routing
+
+2.-Generar un commponente
+	ng generate component header
+	ng generate component footer
+	ng generate component userList	
+	ng generate component userFormEdit
+	ng generate component userFormCreate
+	ng generate component home
+
+3.- Routing o redireccionamiento
+	3.1.-Declaracion de rutas
+	3.2.-Redireccionando con routerlink
+
+4.-Crear modelo user
+	/model/user.ts
+
+5.-Data binding(Interpolacion un item)
+
+6.-Data binding(Interpolacion n items)
+
+7.-Generar un servicio para user
+	ng generate service services/user
+	Resultados:
+	services/user.service.ts
+	services/user.service.spec.ts
+	7.1-Importar modulos, servicios, librerias
+		*Importar UserService en AppModule
+		*Registrar UserService en providers de AppModule
+		*Importar el modulo HttpClientModule en AppModule
+		*Importar el servicio HttpClient en UserService
+		*Importar Observable en UserService de la libreria rxjs
+		*Inportar el modelo user en UserService
+		*Inyectar el servicio HttpClient en el constructor de UserService		
+	7.2-Implementar getuserlist en UserService usando una lista
+		Implementar getuserlist usando una lista de usuarios en UserService
+		Importar el servicio UserService en el componente que deseamos usar
+		Inyectar el servicio UserService en el constructor del componente en el que deseamos usar
+		UserService
+	7.3-Implementar getuserlist en UserService usando Observables
+		Crear url para comunicacion con el backend.
+		Implementar getuserlist usando un Observable en UserService
+		Inyectar el servicio UserService en el constructor del componente que deseamos usar
+		Importar Observable en UserService de la libreria rxjs en el componente
+		Recuperar la lista de UserService
+6.- Data binding(Event binding)
+	userList component
+
+
+
