@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'sky-user-list',
@@ -10,26 +11,10 @@ export class UserListComponent implements OnInit {
 
   userList: User[] = [];
 
-  constructor() {
-
-    this.userList.push({
-      name: "Luis",
-      lastname: "Perez",
-      username: "lucho123",
-      email: "lucho@gmail.com",
-      avatar: "avatarluis"
-    });
-
-    this.userList.push({
-      name: "Juan",
-      lastname: "Gomez",
-      username: "juan123",
-      email: "juan@gmail.com",
-      avatar: "avatarjuan"
-    });    
-  }
+  constructor(private userservice: UserService) {  }
 
   ngOnInit() {
+    this.userList = this.userservice.getUserList();
   }
 
 }

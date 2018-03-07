@@ -10,6 +10,25 @@ export class UserService {
 
   constructor(httpclient: HttpClient) {
     this.myHttpClient = httpclient;
-   }
+  }
+
+  getUserList(): User[] {
+    let userList: User[] = [];
+    userList.push({
+      name: "Luis",
+      lastname: "Perez",
+      username: "lucho123",
+      email: "lucho@gmail.com",
+      avatar: "avatarluis"
+    });
+    userList.push({
+      name: "Luis",
+      lastname: "Perez",
+      username: "lucho123",
+      email: "lucho@gmail.com",
+      avatar: "avatarluis"
+    });
+    return userList;
+  }
 
 }
