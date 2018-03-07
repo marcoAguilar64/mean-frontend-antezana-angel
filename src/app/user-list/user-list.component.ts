@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
 import { UserService } from '../services/user.service';
 import { Observable } from 'rxjs/Observable';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'sky-user-list',
@@ -13,7 +14,8 @@ export class UserListComponent implements OnInit {
   myUserService: UserService;
   userlist: User[] = [];
 
-  constructor(userService: UserService) {
+  constructor(userService: UserService,
+    private router: Router) {
     this.myUserService = userService;
   }
 
@@ -28,6 +30,11 @@ export class UserListComponent implements OnInit {
           console.log('Error del servidor: ', error);
         }
       );
+  }
+
+  public viewUser(userId): void {
+    console.log('id usuario: ', userId);
+    this.router.navigate(['user', userId, 'view']);
   }
 
 }
