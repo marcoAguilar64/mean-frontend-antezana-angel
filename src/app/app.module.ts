@@ -17,6 +17,7 @@ import { TokenInjectorService } from './services/token-injector.service';
 import { FormsModule } from '@angular/forms';
 import { UserInformationComponent } from './user-information/user-information.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [UserService, {
+  providers: [UserService, AuthService, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInjectorService,
     multi: true

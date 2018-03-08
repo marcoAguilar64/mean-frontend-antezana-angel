@@ -15,7 +15,7 @@ export class TokenInjectorService implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     request = request.clone({
       setHeaders: {
-        "auth-access-token": sessionStorage.getItem('localNickname')
+        "auth-access-token": sessionStorage.getItem('token')
       }
     });
     return next.handle(request);

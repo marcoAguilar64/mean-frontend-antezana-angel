@@ -9,7 +9,7 @@ export class AuthService {
 
   constructor(private httpclient: HttpClient) { }
 
-  signIn(credenciales): Observable<any> {
+  login(credenciales): Observable<any> {
     return this.httpclient.post(`${userApiUrl}/login`, credenciales);
   }
 
