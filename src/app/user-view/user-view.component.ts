@@ -13,10 +13,10 @@ export class UserViewComponent implements OnInit {
   userid: string;
   userViewed: User = {
     name: '',
-    lastname:'',
-    username:'',
-    email:'',
-    avatar:''
+    lastname: '',
+    username: '',
+    email: '',
+    avatar: ''
   };
   constructor(
     private activateroute: ActivatedRoute,

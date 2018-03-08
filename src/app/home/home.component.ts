@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'sky-home',
@@ -9,7 +10,17 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  localNickname = sessionStorage.getItem('localNickname');;
+
   ngOnInit() {
   }
 
+  setLocalNickname(): void {
+    sessionStorage.setItem('localNickname', this.localNickname);
+  }
+
+  removeLocalNickname(): void {
+    sessionStorage.removeItem('localNickname');
+    this.localNickname = '';
+  }
 }

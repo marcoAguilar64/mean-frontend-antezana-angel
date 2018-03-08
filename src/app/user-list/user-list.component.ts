@@ -16,7 +16,7 @@ export class UserListComponent implements OnInit {
     private userservice: UserService,
     private router: Router) { }
 
-  ngOnInit() {
+    ngOnInit() {
     this.userservice.getUserList()
       .subscribe(
         (response) => {
