@@ -5,6 +5,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserFormCreateComponent } from './user-form-create/user-form-create.component';
 import { UserFormEditComponent } from './user-form-edit/user-form-edit.component';
 import { UserViewComponent } from './user-view/user-view.component';
+import { UserFormLoginComponent } from './user-form-login/user-form-login.component';
 
 const routes: Routes = [
   {
@@ -21,11 +22,15 @@ const routes: Routes = [
     component: UserFormEditComponent
   }, {
     path: '',
-    redirectTo:'home',
+    redirectTo: 'home',
     pathMatch: 'full'
-  },{
-    path:'user/:id/view',
+  }, {
+    path: 'user/:id/view',
     component: UserViewComponent
+  },
+  {
+    path: 'user/login',
+    component: UserFormLoginComponent
   }
 ];
 

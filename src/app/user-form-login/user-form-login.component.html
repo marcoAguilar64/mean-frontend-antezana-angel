@@ -1,0 +1,12 @@
+<div>
+  <label>UserName:</label>
+  <input type="text" [(ngModel)]='credentials.username' />
+</div>
+<div>
+  <label>Password:</label>
+  <input type="password"  [(ngModel)]='credentials.password'/>
+</div>
+<br>
+<div class="button">
+  <button (click)="login()">Create a user</button>
+</div>
