@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { TokenInjectorService } from './services/token-injector.service';
 import { UserFormLoginComponent } from './user-form-login/user-form-login.component';
 import { AuthService } from './services/auth.service';
+import { UserInformationComponent } from './user-information/user-information.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthService } from './services/auth.service';
     UserFormCreateComponent,
     HomeComponent,
     UserViewComponent,
-    UserFormLoginComponent
+    UserFormLoginComponent,
+    UserInformationComponent
   ],
   imports: [
     BrowserModule,
