@@ -1,3 +1,23 @@
-<p><b>title: </b>{{articleViewed.title}}</p>
+
+<h1>
+  {{articleViewed.title}}
+</h1>
+<tr>
+<td>
+  <br>
+  <img [src]="userViewed.avatar"></td>
+<td>
+
+<p><b>Name: </b>{{userViewed.name}}</p>
+<p><b>Lastname: </b>{{userViewed.lastname}}</p>
+<p><b>Username: </b>{{userViewed.username}}</p>
+</td>
+</tr>
+
+<br><br>
+<h2>Content</h2>
+<tr>
 <p><b>content: </b>{{articleViewed.content}}</p>
-<p><b>author: </b>{{articleViewed.author}}</p>
+</tr>
+
+<h2>Comments</h2>
